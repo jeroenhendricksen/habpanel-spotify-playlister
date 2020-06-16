@@ -1,15 +1,15 @@
 # Spotify Playlists for OpenHAB Habpanel
 
-Note: This is a simplified version of the plugin, tailored to my personal needs. Credits go to [gytisgreitai](https://github.com/gytisgreitai) from which I forked [the original repository](https://github.com/gytisgreitai/habpanel-spotify-playlister).
+Note: This is a simplified version of the plugin, tailored to my personal needs. Credits go to [gytisgreitai](https://github.com/gytisgreitai), from which I forked [this repository](https://github.com/gytisgreitai/habpanel-spotify-playlister).
 
 ![](https://github.com/jeroenhendricksen/habpanel-spotify-playlister/raw/master/media/playlister.png)
 
 - Shows your Spotify playlists (max 50)
-- Allows to play selected item on your configured player
+- Allows to send the selected playlist to an item for further processing
 
 ## Requirements
 
-- A valid Spotify Access token, exposed via an OpenHAB item (eg. `Spotify_AccessToken`). Make sure it is always available and updated whenever needed. This is a requirement, but outside the scope of this plugin.
+- A valid Spotify Access token, exposed via an OpenHAB item (eg. `Spotify_AccessToken`). Make sure it is always available and updated whenever needed. This is a requirement for this plugin, but outside the scope of this plugin.
 - Configured items from binding: `accessToken` and `devicePlayer`, eg:
 
       String Spotify_AccessToken "Spotify accesstoken"
