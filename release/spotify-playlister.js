@@ -1,7 +1,5 @@
 "use strict";
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 angular.module('app.widgets').service('spotifyPlaylisterService', SpotifyPlaylisterService).controller('SpotifyPlaylisterController', SpotifyPlaylisterController);
@@ -81,20 +79,6 @@ function SpotifyPlaylisterController($scope, $timeout, OHService, spotifyPlaylis
 
     if (query === '') {
       loadPlaylists();
-    } else {
-      spotifyPlaylisterService.search(accessToken, query).then(function (results) {
-        ctrl.state.results = [_objectSpread({
-          name: 'Albums'
-        }, results.albums), _objectSpread({
-          name: 'Playlists'
-        }, results.playlists), _objectSpread({
-          name: 'Tracks'
-        }, results.tracks), _objectSpread({
-          name: 'Artists'
-        }, results.artists)];
-      }).catch(function () {
-        return ctrl.state.error = true;
-      });
     }
   };
 
@@ -155,13 +139,6 @@ function SpotifyPlaylisterService($http, $cacheFactory) {
       return doGet(url, accessToken).then(function (_ref2) {
         var data = _ref2.data;
         return data.items;
-      });
-    },
-    search: function search(accessToken, query) {
-      var url = "https://api.spotify.com/v1/search?type=album,artist,playlist,track&q=".concat(encodeURIComponent(query), "&limit=15");
-      return doGet(url, accessToken).then(function (_ref3) {
-        var data = _ref3.data;
-        return data;
       });
     }
   };
