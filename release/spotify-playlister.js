@@ -69,19 +69,6 @@ function SpotifyPlaylisterController($scope, $timeout, OHService, spotifyPlaylis
     OHService.sendCmd($scope.config.spotifyPlayer, item.uri);
   };
 
-  ctrl.search = function () {
-    ctrl.state.query = ctrl.model.query;
-    ctrl.state.error = false;
-    ctrl.state.results = null;
-    var _ctrl$state2 = ctrl.state,
-        accessToken = _ctrl$state2.accessToken,
-        query = _ctrl$state2.query;
-
-    if (query === '') {
-      loadPlaylists();
-    }
-  };
-
   $scope.$watch('config.accessToken', function (accessTokenItemName) {
     if (accessTokenItemName) {
       ctrl.state.noConfig = false;
