@@ -93,7 +93,7 @@ function SpotifyPlaylisterController($scope, $timeout, OHService, spotifyPlaylis
         //XXX: needed when habpanel loaded with refresh. should be a better way
         $timeout(function () {
           init(accessTokenItemName);
-        }, 5000);
+        }, 1000);
       }
     }
   });
