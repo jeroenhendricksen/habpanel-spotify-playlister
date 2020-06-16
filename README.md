@@ -19,12 +19,25 @@ Note: This is a simplified version of the plugin, tailored to my personal needs.
 
 ## Installation
 
-- Add `Spotify Playlister.widget.json` to habpanel
-- Place `release/spotify-playlister.js` file into openHAB html dir under `spotify-playlister` directory, eg:
+1. Place `release/spotify-playlister.js` file into openHAB html dir under `spotify-playlister` directory, eg:
 
       $ cd <OPENHAB_DIR>/conf/html/
       $ mkdir spotify-playlister && cd "$_"
       $ wget https://raw.githubusercontent.com/jeroenhendricksen/habpanel-spotify-playlister/master/release/spotify-playlister.js
 
-- Select `Don't wrap in container` or else it will break the layout
-- Configure widget selecting your `Spotify_AccessToken` and `Spotify_Player` items
+1. Create the required items inside a .items file.
+
+1. Install `Spotify Playlister.widget.json` to habpanel. This can be done via the Gallery functionality:
+
+    - Click `Add Widget` in the top-right corner of habpanel web UI.
+    - Choose `Get more...`
+    - Enter `jeroenhendricksen/habpanel-spotify-playlister` for github repository name and click `Go`
+    - Select `Import Widget`
+
+1. Add the actual widget to habpanel:
+
+    - Click `Add Widget` in the top-right corner of habpanel web UI.
+    - Select `Spotify Playlister`
+    - Edit the settings for the new widget
+    - Select `Don't wrap in container` or else it will break the layout
+    - Configure widget selecting your `Spotify_AccessToken` and `Spotify_Player` items
