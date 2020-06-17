@@ -21,9 +21,11 @@ Note: This is a simplified version of the plugin, tailored to my personal needs.
 
 1. Place `release/spotify-playlister.js` file into openHAB html dir under `spotify-playlister` directory, eg:
 
-      $ cd <OPENHAB_DIR>/conf/html/
-      $ mkdir spotify-playlister && cd "$_"
-      $ wget https://raw.githubusercontent.com/jeroenhendricksen/habpanel-spotify-playlister/master/release/spotify-playlister.js
+      ```
+      cd <OPENHAB_DIR>/conf/html/
+      mkdir spotify-playlister && cd "$_"
+      wget https://raw.githubusercontent.com/jeroenhendricksen/habpanel-spotify-playlister/master/release/spotify-playlister.js
+      ```
 
 1. Create the required items inside a .items file.
 
